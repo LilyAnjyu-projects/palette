@@ -174,7 +174,7 @@ html, body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 88px;
+    height: auto; 
   }
 }
 .logo1 {
