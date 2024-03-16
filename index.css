@@ -456,6 +456,20 @@ html, body {
     border-bottom: 1px solid #ccc;
   }
 }
+.image-container2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px; /* 画像とタイトルの間隔を設定 */
+}
+
+.image-container2 img {
+  width: 250px; /* 画像の幅を調整 */
+  height: auto; /* 画像の高さを自動調整 */
+}
+.about__img {
+  position: relative; /* 画像を相対位置に配置する */
+}
+
 .about__subdesc {
   line-height: 1.7;
 }
