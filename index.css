@@ -261,8 +261,8 @@ html, body {
 }
 
 .fv {
-  background: #08f7fe url('images/fvimagePC.png') top no-repeat;
-  background-size: contain;
+  background: #08f7fe url('images/fvmobile.png') center no-repeat;
+  background-size: cover;
   height: 100vh;
 
 }
@@ -281,11 +281,7 @@ html, body {
   }
 }
 @media only screen and (max-width: 767px) {
-  .fv {
-    background: #08f7fe url('images/fvmobile.png') center no-repeat;
-    background-size: cover; /* 画像を横幅いっぱいに広げる */
-    height: auto;
-  }
+ 
 
   .fv__container {
     height: 400px;
@@ -362,8 +358,27 @@ html, body {
   }
 }
 
+
 .about {
   background: #08f7fe;
+ 
+}
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -40px; /* 画像とタイトルの間隔を設定 */
+}
+
+.image-container img {
+  width: 200px; /* 画像の幅を調整 */
+  height: auto; /* 画像の高さを自動調整 */
 }
 .about__desc {
   width: 600px;
@@ -410,6 +425,7 @@ html, body {
 .about__contents {
   width: 67%;
   margin: 0 0 0 auto;
+
 }
 .about__contents.is-2 {
   order: 0;
