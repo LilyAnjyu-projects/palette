@@ -263,9 +263,10 @@ html, body {
 .fv {
   background: #80cbc4;
   background-image: url(images/firstview2.png);
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center center;
+
 }
 .fv__container {
   width: 1024px;
