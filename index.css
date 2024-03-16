@@ -262,10 +262,8 @@ html, body {
 
 .fv {
   background: #08f7fe;
-  background-image: url(images/firstview2.png);
+  background-image: url(images/fvimagePC.png)top no-repeat;
   background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
   height: 100vh;
 
 }
@@ -284,6 +282,12 @@ html, body {
   }
 }
 @media only screen and (max-width: 767px) {
+  .fv {
+    background: #08f7fe url(images/fvimagphone.png) top no-repeat;
+    background-size: contain;
+    height: 400px; /* スマートフォン用の高さ */
+  }
+
   .fv__container {
     height: 400px;
   }
