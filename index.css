@@ -265,7 +265,7 @@ html, body {
   background-image: url(images/firstview2.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top;
   height: 100vh;
 
 }
