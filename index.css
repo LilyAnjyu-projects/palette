@@ -292,6 +292,10 @@ html, body {
   letter-spacing: 2px;
   margin: 0 0 32px;
   color: #ff00ff;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+  -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+  0px 1px 0 #FFF,  0-1px 0 #FFF,
+  -1px 0 0 #FFF, 1px 0 0 #FFF;
 }
 @media only screen and (max-width: 1024px) {
   .fv__ttl {
@@ -309,6 +313,10 @@ html, body {
   font-size: 20px;
   margin: 0 0 60px;
   color: #ff00ff;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+  -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+  0px 1px 0 #FFF,  0-1px 0 #FFF,
+  -1px 0 0 #FFF, 1px 0 0 #FFF;
 }
 @media only screen and (max-width: 767px) {
   .fv__desc {
