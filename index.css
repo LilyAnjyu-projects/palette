@@ -188,6 +188,10 @@ html, body {
   margin: 0 0 0 32px;
 }
 @media only screen and (max-width: 767px) {
+  .logo1 {
+    width: 80px; /* メディアクエリに応じた幅 */
+  }
+
   .header__ttl {
     font-size: 24px;
     margin: 0 0 12px;
@@ -316,6 +320,7 @@ html, body {
   }
 }
 .fv__cv {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -532,6 +537,7 @@ html, body {
   }
 }
 .recruit__more {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
