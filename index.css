@@ -345,6 +345,25 @@ html, body {
   transition: all 0.5s ease 0s;
   border: 2px solid #c33e8e;
 }
+.fv__cv2 {
+  text-align: center;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  background: #08f7fe;
+  color: #000;
+  text-decoration: none;
+  width: 300px;
+  height: 65px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 5px #03585b;
+  transition: all 0.5s ease 0s;
+  border: 2px solid #069ffe;
+}
 .fv__cv:hover {
   box-shadow: none;
   background: #fff;
