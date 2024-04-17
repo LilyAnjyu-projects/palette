@@ -374,8 +374,14 @@ html, body {
   background: #fff;
   color: #fe53bb;
 }
+.fv__cv2:hover {
+  box-shadow: none;
+  background: #fff;
+  color: #08f7fe;
+}
+
 @media only screen and (max-width: 1024px) {
-  .fv__cv {
+  .fv__cv .fv__cv2 {
     font-size: 20px;
     width: 250px;
     height: 55px;
