@@ -282,7 +282,7 @@ html, body {
 }
 @media only screen and (max-width: 767px) {
   .fv {
-    background-image: url('images/fvimagePC.png'); /* スマートフォン用の画像に差し替える */
+    background-image: url('images/fvimagphone.png'); /* スマートフォン用の画像に差し替える */
     background-position: center;
     background-size: cover;
     height: 400px; /* スマートフォン用の高さに変更 */
