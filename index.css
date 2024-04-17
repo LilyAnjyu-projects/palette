@@ -262,7 +262,7 @@ html, body {
 
 .fv {
   background: #08f7fe url('images/fvimagePC.png') center no-repeat;
-  background-size: 100% 100%; 
+  background-size: cover; 
   height: 100vh;
 
 }
@@ -285,7 +285,8 @@ html, body {
     background-image: url('images/fvimagphone.png'); /* スマートフォン用の画像に差し替える */
     background-position: center;
     background-size: cover;
-    height: 400px; /* スマートフォン用の高さに変更 */
+    width: 100%;
+    height: auto; /* スマートフォン用の高さに変更 */
   }
   .fv__container {
     height: auto;
