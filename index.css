@@ -261,7 +261,7 @@ html, body {
 }
 
 .fv {
-  background: #08f7fe url('images/fvmobile.png') center no-repeat;
+  background: #08f7fe url('images/fvimagePC.png') center no-repeat;
   background-size: cover;
   height: 100vh;
 
