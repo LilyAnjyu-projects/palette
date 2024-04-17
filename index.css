@@ -322,6 +322,9 @@ html, body {
   -1px 1px 0 #FFF, 1px -1px 0 #FFF,
   0px 1px 0 #FFF,  0-1px 0 #FFF,
   -1px 0 0 #FFF, 1px 0 0 #FFF;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px; /* テキストの周囲に余白を設定 */
+  border-radius: 5px; /* テキストの角を丸くする */
 }
 @media only screen and (max-width: 767px) {
   .fv__desc {
