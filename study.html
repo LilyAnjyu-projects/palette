@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しゅだいぱれっと！</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="子育て応援隊パレットの無料学習支援しゅくだいぱれっと詳細">
+    <meta name="keywords" content="世田谷, 子育て応援隊, 学習支援">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .main h2 {
+            margin-top: 0;
+        }
+        .main p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .study-title{
+            width: 100%;
+            height: 200px;
+            background-image: url('images/title.png');
+            background-size: cover; /* 画像がコンテナ全体をカバーする */
+            background-position: center; /* 画像が中央に配置される */
+            background-repeat: no-repeat; /* 画像が繰り返されない */
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .conversion-area {
+            background-color: #74BBE1;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .conversion-area h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .conversion-area p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .conversion-area-cta-button {
+            display: inline-block;
+            width: 300px; 
+            padding: 10px 30px;
+            background-color: #F48471;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .conversion-area-cta-button:hover {
+            background-color: #FD9583;
+        }
+        .study-issue{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 子要素を左右中央に配置 */
+            height: auto;
+        }
+        .study-point1,
+        .study-point2,
+        .study-point3 {
+            width: 80%;
+            height: 200px;
+            background-color: lightblue;
+            margin: 10px 0; /* 上下に間隔を空ける */
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: left;
+            border-radius: 10px;
+        }
+        .study-content3 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .study-content3 h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature-cards{
+          display: flex;
+          justify-content: space-between;
+        }
+        .feature-card {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin-right: 10px;
+            width: 100%;
+
+        }
+        .feature-card:last-child {
+            margin-right: 0; /* 最後のカードの右側の隙間をなくす */
+        }
+        .feature-card h2 {
+            margin-top: 0;
+        }
+        .feature-card-img1{
+          width: 100%;
+          height: auto;
+    
+        }
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .faq-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .faq-question {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border-radius: 5px;
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+            border-left: 4px solid #007BFF;
+            margin-top: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: darkgray;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .study-content5 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .study-content5 h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .study-content5 p {
+            margin: 10px 0;
+        }
+        .study-content5-map ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .study-content5-map ul li {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .study-content5 iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .social-button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .social-button-1{
+          display: inline-block;
+            padding: 10px;
+            color: #111;
+            text-decoration: none;
+            border-radius: 20%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 20px;
+            margin-right: 10px;
+            background-image: url('images/facebook.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .social-button-2{
+          display: inline-block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 20px;
+            margin-right: 10px;
+            background-image: url('images/insta.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        .flow-section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .flow-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .flow-step {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .flow-step span {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .flow-note {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        .info-highlight {
+            background-color: #FDEA6C;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .bottom-text2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .bottom-text2 h6 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+        .bottom-text2 h1 {
+            margin: 5px 0; 
+            padding: 0;
+            line-height: 1.2;
+        }
+        .logo3 {
+        background-size: cover;
+        background-image: url(images/logo1.png);
+        background-repeat: no-repeat;  
+        margin:0 auto;
+        width: 230px; /* 重ねる画像の幅 */
+        height: 200px; 
+        }
+    </style>
+    <script>
+      function toggleAnswer(id) {
+          var answer = document.getElementById(id);
+          if (answer.style.display === "none" || answer.style.display === "") {
+              answer.style.display = "block";
+          } else {
+              answer.style.display = "none";
+          }
+      }
+  </script>
+</head>
+<body>
+    <div class="header">
+        <h1>しゅくだい ぱれっと！</h1>
+    </div>
+    <div class="main">
+        <div class="studyimage" >
+          <img src="images/studyimg.png"  width="100%" alt=""> 
+        </div>
+        <div class="conversion-area">
+          <h2>今すぐ登録して予約開始のお知らせを受け取ろう！</h2>
+          <a href="https://your_signup_link.com" class="conversion-area-cta-button">今すぐ登録</a>
+        </div>
+
+        <h2>すべての子どもたちに
+          学びの機会を</h2>
+        <p>世田谷区子どもの学び場スタートアップ事業助成決定団体「子育て応援隊ぱれっと！」が提供する無料学習支援教室の参加者を募集しています。
+          </p>
+        <h2>安心・安全な学びの場</h2>
+        <p>放課後の子どもの居場所と地域との関わりを作り、お母さんたちが安心できるようサポートします。</p>
+    </div>
+
+    <div class="study-title">
+        <h1>利用までの流れ</h1>
+    </div>
+    <div class="study-issue">
+    <div class="study-point1">
+          <div class="study-content1">
+              <h2>1. 事前登録</h2>
+              <p>事前登録はオンラインで行います。登録が完了すると、予約開始時にお知らせが届きます。</p>
+              <a href="https://forms.gle/E9AWSBhvgYEFjSEs8" class="cta-button">今すぐ登録</a>
+          </div>
+      </div>
+      <div class="study-point2">
+          <div class="study-content2">
+              <h2>2. 予約</h2>
+              <p>お知らせを受け取ったら、オンラインで予約を行います。予約が確定すると、確認メールが届きます。</p>
+          </div>
+      </div>
+      <div class="study-point3">
+          <div class="study-content3">
+              <h2>3. 当日参加</h2>
+              <p>開催日に会場へお越しください。スタッフが皆様をお迎えします。</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="study-content3">
+        <h1>しゅくだいぱれっと！の特徴</h1>
+        <div class="feature-cards">
+        <div class="feature-card">
+            <h2>少人数制</h2>
+            <img src="images/1.png" class="feature-card-img1" alt="Image">
+            <p>自分のペースで進められ、わからないことはすぐに質問ができます。</p>
+        </div>
+        <div class="feature-card">
+            <h2>アットホームな空間</h2>
+            <img src="images/2.png" class="feature-card-img1" alt="Image">
+            <p>学習以外のおしゃべりや相談もしやすい環境です。
+            </p>
+        </div>
+        <div class="feature-card">
+            <h2>旬の軽食つき</h2>
+            <img src="images/3.png" class="feature-card-img1" alt="Image">
+            <p>世田谷やさいを中心に季節を感じられる食育も体験できます。</p>
+        </div>
+        </div>
+        <div class="info-highlight">
+            <p><strong>対象:</strong> 主に小学校1年生から4年生</p>
+            <p><strong>定員:</strong> 各回10名</p>
+            <p><strong>開催日時:</strong> 原則第2木曜 15:30~17:30 (宿題 15:30~16:30, 軽食 16:30~17:30)</p>
+            <p><strong>会場:</strong> カフェ ダナダナ</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h1 class="faq-title">よくある質問</h1>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer1')">Q1. 参加費はかかりますか？</div>
+            <div class="faq-answer" id="answer1">A1. いいえ、参加費は無料です。世田谷区の子どもの学び場スタートアップ事業の助成金を受けて運営をしているため無料です。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer2')">Q2. どのように予約すればよいですか？</div>
+            <div class="faq-answer" id="answer2">A2. 事前登録後、予約開始のお知らせが届きますので、その後オンラインで予約を行ってください。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer3')">Q3. 予約のキャンセルはできますか？</div>
+            <div class="faq-answer" id="answer3">A3. はい、お手数ですが、メールにてご連絡ください。キャンセルが続く場合は今後の利用を制限させて
+              いただく可能性がありますのでご了承ください。
+            </div>
+        </div>
+    </div>
+
+    <div class="study-content5">
+        <h1>アクセス</h1>
+        <p>会場: カフェ ダナダナ Cafe DANA DANA</p>
+        <div class="study-content5-map">
+            <ul>
+                <li>住所: 〒156-0043 東京都世田谷区松原４丁目１１−７ 第一整美楽 104</li>
+                <li>URL: <a href="https://himawari-design.net/dana-dana/">https://himawari-design.net/dana-dana/</a></li>
+            </ul>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.4204502746942!2d139.6417969881299!3d35.660210588388736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3564d89adf9%3A0xf2f5117b5c77ce71!2zREFOQSBEQU5BIOODgOODiuODgOODig!5e0!3m2!1sja!2sjp!4v1638254949492!5m2!1sja!2sjp" allowfullscreen="" loading="lazy">
+
+        </iframe>
+    </div>
+
+    <div class="social-button-container">
+        <a href="" class="social-button-1">設置中</a>
+        <a href="https://instagram.com/palette.setagaya" class="social-button-2"> </a>
+    </div>
+    <div class="bottom-text2">
+      <h6>人生に新たな気づきとつながりを！</h6>
+      <h1>子育て応援隊ぱれっと！</h1>
+      <div class="logo3">
+      </div>
+      お問い合わせ：paletto.setagaya@gmail.com
+      </div>
+
+    <div class="footer">
+        <p>&copy; 2024 子育て応援隊ぱれっと！. All rights reserved.</p>
+    </div>
+</body>
+</html>
