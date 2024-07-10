@@ -131,41 +131,25 @@
         .feature-cards{
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          gap: 10px;
         }
         .feature-card {
             background-color: #fff;
             padding: 20px;
-            margin-bottom: 20px;
             border-left: 4px solid #007BFF;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            margin-right: 10px;
-            width: 100%;
-            margin-bottom: 20px; 
+            flex: 1 1 calc(33.33% - 10px);
+            box-sizing: border-box;
         }
-        @media only screen and (min-width: 600px) {
-    .feature-card {
-        width: calc(50% - 20px); /* 画面幅が600px以上の場合、2列に並べる */
-    }
-}
 
-@media only screen and (min-width: 900px) {
-    .feature-card {
-        width: calc(33.33% - 20px); /* 画面幅が900px以上の場合、3列に並べる */
-    }
-}
-        .feature-card:last-child {
-            margin-right: 0; /* 最後のカードの右側の隙間をなくす */
-        }
+
         .feature-card h2 {
             margin-top: 0;
         }
         .feature-card-img1{
-          width: 100%;
-          height: auto;
-    
+          width: auto;
+          height: auto;  
         }
         .faq-section {
             max-width: 800px;
