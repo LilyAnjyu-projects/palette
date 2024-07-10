@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            width: 100%;
         }
         .header {
             background-color: #f8f9fa;
@@ -34,13 +35,30 @@
             font-size: 18px;
             line-height: 1.6;
         }
+        .studyimge{
+            width: 1024px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .section__container {
+    width: 90%;
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section__container {
+    padding: 42px 0;
+  }
+}
+        
         .study-title{
             width: 100%;
-            height: 200px;
+            height: auto;
             background-image: url('images/title.png');
-            background-size: cover; /* 画像がコンテナ全体をカバーする */
-            background-position: center; /* 画像が中央に配置される */
-            background-repeat: no-repeat; /* 画像が繰り返されない */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: black;
             display: flex;
             align-items: center;
@@ -68,7 +86,7 @@
         }
         .conversion-area-cta-button {
             display: inline-block;
-            width: 300px; 
+            width: 70%; 
             padding: 10px 30px;
             background-color: #F48471;
             color: #fff;
@@ -90,7 +108,7 @@
         .study-point2,
         .study-point3 {
             width: 80%;
-            height: 200px;
+            height: auto;
             background-color: lightblue;
             margin: 10px 0; /* 上下に間隔を空ける */
             padding: 20px;
@@ -99,7 +117,7 @@
             border-radius: 10px;
         }
         .study-content3 {
-            max-width: 800px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 20px;
             background-color: #f9f9f9;
@@ -112,6 +130,7 @@
         }
         .feature-cards{
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
         }
         .feature-card {
@@ -124,8 +143,19 @@
             flex: 1;
             margin-right: 10px;
             width: 100%;
-
+            margin-bottom: 20px; 
         }
+        @media only screen and (min-width: 600px) {
+    .feature-card {
+        width: calc(50% - 20px); /* 画面幅が600px以上の場合、2列に並べる */
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .feature-card {
+        width: calc(33.33% - 20px); /* 画面幅が900px以上の場合、3列に並べる */
+    }
+}
         .feature-card:last-child {
             margin-right: 0; /* 最後のカードの右側の隙間をなくす */
         }
@@ -327,7 +357,7 @@
     </div>
     <div class="main">
         <div class="studyimage" >
-          <img src="images/studyimg.png"  width="100%" alt=""> 
+          <img src="images/studyimg.png"  width="100%" alt="アイキャッチ画像"> 
         </div>
         <div class="conversion-area">
           <h2>今すぐ登録して予約開始のお知らせを受け取ろう！</h2>
@@ -369,6 +399,7 @@
 
     <div class="study-content3">
         <h1>しゅくだいぱれっと！の特徴</h1>
+
         <div class="feature-cards">
         <div class="feature-card">
             <h2>少人数制</h2>
