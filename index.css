@@ -426,13 +426,7 @@ html, body {
     margin: 0 auto 48px;
   }
 }
-.about__item {
-  width: 100%;
-  list-style: none;
-  display: flex;
-  margin: 0 0 48px;
-  flex-wrap: wrap;
-}
+
 .about__img {
   width: 30%;
 }
@@ -456,8 +450,8 @@ html, body {
   }
 }
 .about__contents {
-  width: 67%;
-  margin: 0 0 0 auto;
+  width: 80%;
+  margin: 0  auto;
 
 }
 .about__contents.is-2 {
@@ -489,6 +483,7 @@ html, body {
     border-bottom: 1px solid #ccc;
   }
 }
+
 .image-container2 {
   display: flex;
   justify-content: center;
@@ -511,6 +506,46 @@ html, body {
     font-size: 14px;
   }
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container > div {
+  background-color: #fff;
+  margin-bottom: 3em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  flex: 1 1 calc(33.33% - 2em);
+}
+@media (max-width: 768px) {
+  .container > div {
+    flex: 1 1 100%;
+  }
+}
+
+.box h2 {
+  position: relative;
+  display: inline-block;
+  background-color: #f0f0f0; /* 帯の背景色 */
+  padding: 10px 20px; /* 帯の内側の余白 */
+  border-radius: 5px; /* 帯の角を丸める */
+  margin: 10px 0; /* 帯の上下の余白 */
+}
+
+.section-info h2 {
+  position: relative;
+  display: inline-block;
+  background-color: #f0f0f0; /* 帯の背景色 */
+  padding: 10px 20px; /* 帯の内側の余白 */
+  border-radius: 5px; /* 帯の角を丸める */
+  margin: 10px 0; /* 帯の上下の余白 */
+}
+
+
 
 .price__desc {
   width: 600px;
