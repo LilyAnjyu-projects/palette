@@ -21,21 +21,55 @@
   <meta property="og:description" content="子育て応援隊ぱれっと！のサイト">
   <meta property="og:url" content="https://palette-beta.vercel.app/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/logo1.png"> </head>
+  <meta property="og:image" content="images/logo1.png"> 
+  <style>
+
+    .feature-cards{
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+            }
+            .activity{
+                background-color: #fff;
+                margin-bottom: 3em;
+                padding: 20px;
+                border-left: 4px solid #007BFF;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                flex: 1 1 calc(33.33% - 10px);
+                box-sizing: border-box;
+                
+            }
+    
+    
+            .activity h2 {
+                margin-top: 0;
+                color: #4CAF50;
+            }
+            .feature-card-img1{
+              width: auto;
+              height: auto;  
+            }
+        </style></head>
 <body>
   <img src="images/border.png" alt="border" class="border-image">
     
   <header class="header">
     <img src="images/logo1.png" alt="Logo" class="logo1">
     <h1 class="header__ttl">子育て応援隊ぱれっと！</h1>
+
+
     <nav class="gnav">
       <ul class="gnav__list">
-        <li class="gnav__item"><a class="gnav__link" href="#about">ABOUT</a></li>
+        <li class="gnav__item"><a class="gnav__link" href="index.html">HOME</a></li>
         <li class="gnav__item"><a class="gnav__link" href="#price">WORKS</a></li>
-        <li class="gnav__item"><a class="gnav__link" href="#recruit">JOIN US</a></li>
+        <li class="gnav__item"><a class="gnav__link" href="#donation.html">JOIN US</a></li>
       </ul>
       <!-- /.gnav -->
     </nav>
+
+    
+
     <!-- /.header -->
   </header>
   <main>
@@ -49,7 +83,7 @@
           子どもも大人も笑って過ごせる「居場所」を<br>
           作っています。<br>
           皆様のお越しをこころよりお待ちしております。<br>
-          【予約受付中】
+      
            </p> 
            <a href="https://lin.ee/EKTUWzi" class="fv__cv">【公式LINE】より<br>参加してみる</a>
            <a href="https://utme.uniqlo.com/jp/front/market/show?id=1021182&locale=ja" target="_blank" class="fv__cv2">【ユニクロ UT】で<br>支援する</a>
@@ -67,50 +101,88 @@
         <h2 class="about__ttl section__ttl">子育て応援隊ぱれっと! とは？
         </h2>
         <p class="about__desc"> 「子育て応援隊ぱれっと!」は、 
-          子どもが幸せな場所作りたい！という思いのもと 
           世田谷区 や 社会福祉協議会の助成を受けて
           無料学習支援や工作ワークショップやイベントを提供しています。<br>
           誰もが学べる機会と居場所づくりに向けて
-          走り続けています。
-      
-         <ul class="about__list">
-          <li class="about__item">
-            <div class="about__img"><img src="images/1.png" alt=""></div>
+          普通のお母さんたちが走り続けています。
+        
+          
+            <div class="about__img"><img src="#" alt=""></div>
             <div class="about__contents">
-              <h3 class="about__subttl">子育ての社会課題
-              </h3>
-              <h1>子育てには問題が山積み！</h1>
-              <div class="image-container2">
-                <img src="images/introduction-img3.png" alt="image">
-              </div>
-              
+              <h2 class="about__ttl section__ttl">子育ての社会問題
+              </h2>
               <p class="about__subdesc">
                 お金のことや、保活、ワンオペなど問題がさまざま。
                 そして、電車やバスでベビーカーが使いにくい、赤ちゃんが泣くと冷たい目で見られる…など、日本の子育てってなんだかおかしくない？と思う人も多いですよね。
                 そんな問題を抱えながらお母さんは毎日の家事やお仕事を抱えて息をつく暇さえない。
                 </p>
+                <section class="container">
+                  <div class="box">
+                    <h2>情報不足</h2>
+                    <img src="images/box1.png" width="80%" style="display: block; margin: auto;">
+                      <p>
+                      SNSが発達しているから情報が錯綜し子育てに関する正しい情報が得られにくく、親たちは不安や孤立感を感じることが多いです。
+                    </p>
+                  </div>
+                  <div class="box">
+                    <h2>経済的負担</h2>
+                    <img src="images/box2.png" width="80%" style="display: block; margin: auto;">
+                    <p>
+                      教育費や育児費用の増加により、家庭の経済的な負担が大きくなっています。
+                    </p>
+                  </div>
+                  <div class="box">
+                    <h2>孤立感とストレス</h2>
+                    <img src="images/box3.png" width="80%" style="display: block; margin: auto;">
+                    <p>
+                      核家族化が進み、親たちが育児の孤立感やストレスを感じやすくなっています。
+
+                    </p>
+                  </div>
+                </section>
+                <h2 class="about__ttl section__ttl">解決へ向けて
+                </h2>
+
+                <div class="container">
+                  
+                  <div class="section-info">
+                      <h2>情報不足の解決</h2>
+                      <img src="images/box5.png" width="80%" style="display: block; margin: auto;">
+                      <p>子育てママ同士の経験談を踏まえて情報を交換し合い、サポートし合う場を作り、子育てに関する情報を得ることができ、安心して育児に取り組むことができます。</p>
+                  </div>
+                  <div class="section section-info">
+                      <h2>経済的負担の軽減</h2>
+                      <img src="images/box6.png" width="80%" style="display: block; margin: auto;">
+                      <p>教育費はどの家庭にとっても大きな負担。日本は特に諸外国に比べて教育費が高いです。無料での学習支援や低コストの工作活動を提供しています。これにより、経済的な負担を軽減し、子供たちの成長をサポートします。</p>
+                  </div>
+                  <div class="section section-info">
+                      <h2>孤独感の解消</h2>
+                      <img src="images/box7.png" width="80%" style="display: block; margin: auto;">
+                      <p>「ぱれっと！での活動」を通じて、孤独感を和らげる機会を提供しています。共に活動することで、親や子供たちがコミュニティに繋がり、心強いサポートを得ることができます。</p>
+                  </div>
+              </div>
+              
+              
             </div>
-          </li>
-          <li class="about__item">
-            <div class="about__img is-2"><img src="images/2.jpg" alt=""></div>
+          
+          
+            <div class="about__img is-2"><img src="#" alt=""></div>
             <div class="about__contents is-2">
               <h3 class="about__subttl">「子育て応援隊ぱれっと！」になるまで</h3>
-              <h1>子どもが好きで、子どもが幸せな場所を作りたい</h1>
+              <h1>社会全体が子育てに優しくなるように</h1>
               <p class="about__subdesc">
-                社会全体が子育てに優しくなるように
-
-                幼稚園を通じて知り合った数人の母親たちは、子育てに関する悩みや喜びを共有する中で、
-                周りには発達障害や不登校の子どもたちがたくさんいる現実に直面しました。
-                そのような状況に深く共感し、地域の子育てがよりワクワクするようなものになるよう、支援がますます重要であることを実感しました。
-                そこで、保育士資格やピアカウンセラーの資格を取得し、より多くの子どもたちや家族に支えを提供するために「子育て応援隊ぱれっと！」を設立するために立ち上がりました。
+                子どもを通じて知り合った数人の母親たちは、子育てに関する悩みや喜びを共有する中で、
+                発達障害や不登校の子どもたちがたくさんいる現実に直面しました。
+                そのような状況に深く共感し、自分たちだけではなく自分の周り、地域の子育てがよりワクワクするようなものになるよう、支援がますます重要であることを実感しました。
+                そこで、保育士資格やピアカウンセラーの資格、食品衛生管理者と学び取得をし、より多くの子どもたちや家族に支えを提供するために「子育て応援隊ぱれっと！」を設立するために立ち上がりました。
                 私たちは情熱と専門知識を活かし、地域の子育てコミュニティをより強く、包括的に支えるために活動を始めました。
                </p>
             </div>
-          </li>
-          <li class="about__item">
+          
+          
 
             <div class="about__img">
-              <img src="images/middle2.png" alt="">
+              <img src="#" alt="">
               
             </div>
             <div class="about__contents">
@@ -127,8 +199,7 @@
                 お母さんが笑っていたら、子どももは幸せ。だからこそ、お母さんの悩みを晴れやかにして癒したい。
                 そんな場所を目指しています。 </p>
             </div>
-          </li>
-        </ul>
+          
         <!-- /.container -->
       </div>
       <!-- /.about -->
@@ -143,32 +214,71 @@
          ワークショップでは工作などのものづくりイベントを企画し、マルシェでは親子で参加ができ家族の絆を育みます。
          私たちは毎日を有意義に過ごせるよう、様々な活動を提供しています。
         </p>
-        <ul class="price__list">
-          <li class="price__item">
-            <h3 class="price__plan">しゅくだい　ぱれっと（学習サポート）</h3>
-            <table class="price__table">
-              <tbody>
-                <tr>
-                  <th class="price__name">開催日</th>
-                  <td class="price__data">第二木曜日　15時〜17時</td>
-                </tr>
-                <tr>
-                  <th class="price__name">会場</th>
-                  <td class="price__data">カフェダナダナ<br>東京都世田谷区松原4-11-7-104 </td>
-                </tr>
-                <tr>
-                  <th class="price__name">内容</th>
-                  <td class="price__data"><a href="https://palette-beta.vercel.app/study.html">詳細はこちらから</a> </td>
-                </tr>
-                <tr>
-                  <th class="price__name">チラシ</th>
-                  <td class="price__data"><img src="images/工作１.png" width="30%" style="display: block; margin: auto;"></td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li class="price__item">
-            <h3 class="price__plan">でこぼこ　てぃーぶれいく（お茶会）</h3>
+        
+        <!-- /.container -->
+      </div>
+      <!-- /.price -->
+    </section>
+    <section class="activity">
+      <h2>食育つき無料学習支援</h2>
+      <p>子どもたちに健康な食生活を提供しながら、無料の学習支援を行っています。食育を通じて、食の大切さを学びます。</p>
+      <h3 class="price__plan">しゅくだい　ぱれっと</h3>
+      
+      <table class="price__table">
+        <tbody>
+          <tr>
+            <th class="price__name">開催日</th>
+            <td class="price__data">第二木曜日　15時〜17時</td>
+          </tr>
+          <tr>
+            <th class="price__name">会場</th>
+            <td class="price__data">カフェダナダナ<br>東京都世田谷区松原4-11-7-104 </td>
+          </tr>
+          <tr>
+            <th class="price__name">詳細</th>
+            <td class="price__data"><a href="https://palette-beta.vercel.app/study.html">詳細はこちらから</a> </td>
+          </tr>
+          <tr>
+            <th class="price__name">チラシ</th>
+            <td class="price__data"><img src="images/オオゼキ２.png" width="30%" style="display: block; margin: auto;"></td>
+          </tr>
+        </tbody>
+      </table>
+
+  </section>
+    
+  <section class="activity">
+      <h2>お祭り・マルシェ・工作ワークショップ</h2>
+      <p>地域のお祭りやマルシェを企画・運営しています。家族みんなで楽しめるイベントが盛りだくさんです。</p>
+      <h3 class="price__plan">ワークショップ・マルシェ</h3>
+      <table class="price__table">
+        <tbody>
+          <tr>
+            <th class="price__name">開催日</th>
+            <td class="price__data">不定期</td>
+          </tr>
+          <tr>
+            <th class="price__name">会場</th>
+            <td class="price__data">＜ワークショップ＞経堂近辺の区民会館<br>詳細は都度確認ください <br>＜おまつり・マルシェ＞都内</td>
+          </tr>
+          <tr>
+            <th class="price__name">内容</th>
+            <td class="price__data">＜ワークショップ＞子どもが楽しめる工作をします。<br>＜マルシェ＞お店作りや販売を楽しもう！  </td>
+          </tr>
+          <tr>
+            <th class="price__name">チラシ</th>
+            <td class="price__data"><img src="images/工作１.png" width="30%" style="display: block; margin: auto;"></td>
+          </tr>
+        </tbody>
+      </table>
+
+  </section>
+  <section class="activity">
+      <h2>お母さんたちの茶話会</h2>
+      <p>お母さんたちがリラックスできる場を提供しています。育児の悩みを共有したり、情報交換を行ったりすることができます。</p>
+      <h3 class="price__plan">でこぼこ　てぃーぶれいく</h3>
+      
+      
             <table class="price__table">
               <tbody>
                 <tr>
@@ -185,43 +295,17 @@
                 </tr>
                 <tr>
                   <th class="price__name">チラシ</th>
-                  <td class="price__data"><img src="images/工作１.png" width="30%" style="display: block; margin: auto;"></td>
+                  <td class="price__data"><img src="images/dekoboko.png" width="30%" style="display: block; margin: auto;"></td>
                 </tr>
             </table>
-          </li>
-          <li class="price__item">
-            <h3 class="price__plan">ワークショップ・マルシェ</h3>
-            <table class="price__table">
-              <tbody>
-                <tr>
-                  <th class="price__name">開催日</th>
-                  <td class="price__data">不定期</td>
-                </tr>
-                <tr>
-                  <th class="price__name">会場</th>
-                  <td class="price__data">＜ワークショップ＞経堂近辺の区民会館<br>詳細は都度確認ください <br>＜マルシェ＞都内</td>
-                </tr>
-                <tr>
-                  <th class="price__name">内容</th>
-                  <td class="price__data">＜ワークショップ＞子どもが楽しめる工作をします。<br>＜マルシェ＞お店作りや販売を楽しもう！  </td>
-                </tr>
-                <tr>
-                  <th class="price__name">チラシ</th>
-                  <td class="price__data"><img src="images/工作１.png" width="30%" style="display: block; margin: auto;"></td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          
-        </ul>
-        <!-- /.container -->
-      </div>
-      <!-- /.price -->
-    </section>
+  </section>
+
+
     <section class="recruit" id="recruit">
       <div class="recruit__container section__container">
         <h2 class="recruit__ttl section__ttl">JOIN US A NEW MEMBER</h2>
-        <p class="recruit__desc"> 子育て応援隊ぱれっと!では、いつでも見学が可能です。<br>
+        <p class="recruit__desc"> 子育て応援隊ぱれっと!は、普通のお母さんたちが子育てを楽しく、楽にするため、みんなで協力して子育てしよう！という団体です。<br>
+          おまつり、ワークショップなど楽しい企画が盛りだくさん！<br>
           ぱれっと!を実際に体験してみましょう。 皆様のお越しを心よりお待ちしております。 </p> <a href="https://lin.ee/EKTUWzi" class="recruit__more">【公式LINE】より<br>まずはお友達登録から</a> 
         
           
@@ -230,13 +314,16 @@
           <h1>子育て応援隊ぱれっと！</h1>
           <div class="logo3">
           </div>
-          お問い合わせ：paletto.setagaya@gmail.com
+          お問い合わせ：<a href="mailto:palette.setagaya@gmail.com">palette.setagaya@gmail.com</a>
           </div>
       </div>
     </section>
+
+    
+  
     <!-- /.main -->
   </main>
-  <footer class="footer"> <small class="footer__copy"> 子育て応援隊ぱれっと!
+  <footer class="footer"> <small class="footer__copy"> <p>&copy; 2024 子育て応援隊ぱれっと！</p>
 
 </small>
 
