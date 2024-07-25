@@ -297,6 +297,7 @@ html, body {
   .text-overlay{
       font-size: 1.5em;
       transform: translate(-50%, -50%);
+      width: 80vw;
 
   }
   
@@ -466,25 +467,27 @@ html, body {
   width: 100%;
   min-width: 300px;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 600px) {
   .works-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .works-container > div {
-      width: 100%;
-      max-width: 500px;
-      margin-bottom: 20px;
-  }
   .works-img {
     margin-right: 0;
     margin-bottom: 20px;
     width: 100%;
     max-width: 300px;
   }
+
+  .works-container p{
+    max-width: 100%;
+  }
 }
+
+
 
 
 
@@ -584,29 +587,6 @@ html, body {
   }
 }
 
-
-.about__img {
-  width: 30%;
-}
-.about__img img {
-  width: 100%;
-}
-.about__img.is-2 {
-  order: 1;
-  margin: 0 0 0 auto;
-}
-@media only screen and (max-width: 1024px) {
-  .about__img.is-2 {
-    margin: 0 0 24px;
-    order: 0;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .about__img {
-    width: 100%;
-    margin: 0 0 24px;
-  }
-}
 .about__contents {
   width: 80%;
   margin: 0  auto;
