@@ -282,9 +282,9 @@ html, body {
 
 .text-overlay {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 30%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
@@ -292,6 +292,18 @@ html, body {
   padding: 10px 20px;
   border-radius: 5px;
   z-index: 10; /* スライドショーの上に表示 */
+}
+@media (max-width: 600px) {
+  .text-overlay{
+      font-size: 1.5em;
+      transform: translate(-50%, -50%);
+
+  }
+  
+  .text-overlay p {
+      font-size: 1em;
+      padding: 10px;
+  }
 }
 
 .fade {
@@ -423,9 +435,6 @@ html, body {
   }
 }
 
-
-
-
 .image-container {
   display: flex;
   justify-content: center;
@@ -443,6 +452,10 @@ html, body {
   justify-content: space-around; /* 要素を均等に並べる */
   align-items: center; /* 要素を縦に中央揃え */
   padding: 10px; /* コンテナの内側にスペースを追加 */
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .works-container div {
@@ -451,7 +464,30 @@ html, body {
   margin: 0 10px; /* 要素間にスペースを追加 */
   background-color: #f0f0f0;
   width: 100%;
+  min-width: 300px;
 }
+@media (max-width: 768px) {
+  .works-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .works-container > div {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 20px;
+  }
+  .works-img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+
 .work-button {
   display: inline-block;
   padding: 10px 20px;
@@ -576,38 +612,11 @@ html, body {
   margin: 0  auto;
 
 }
-.about__contents.is-2 {
-  order: 0;
-  margin: 0;
-}
 @media only screen and (max-width: 1024px) {
   .about__contents {
     width: 100%;
   }
 }
-
-
-.image-container2 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0px; /* 画像とタイトルの間隔を設定 */
-}
-
-.image-container2 img {
-  width: 250px; /* 画像の幅を調整 */
-  height: auto; /* 画像の高さを自動調整 */
-}
-
-
-.about__subdesc {
-  line-height: 1.7;
-}
-@media only screen and (max-width: 767px) {
-  .about__subdesc {
-    font-size: 14px;
-  }
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -656,7 +665,7 @@ html, body {
 }
 @media only screen and (max-width: 1024px) {
   .price__desc {
-    margin: 0 auto 48px;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -669,6 +678,7 @@ html, body {
 .recruit {
   background: #08f7fe;
   width: 100%;
+  text-align: center;
 
 }
 .recruit__desc {
