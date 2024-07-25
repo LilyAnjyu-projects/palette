@@ -248,6 +248,12 @@ section {
             text-align: center;
             border-radius: 10px;
 }
+@media only screen and (max-width: 767px) {
+  .section-box {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+}
 
 .cute-list{
   list-style: none; /* リストマークを無しにする */
@@ -394,6 +400,13 @@ button {
 button:hover {
   background-color: #e09e00;
 }
+
+.contact-info a {
+  word-break: break-all;
+  /* 必要に応じて他のスタイルを追加できます */
+}
+
+
 .comennt{
   background-color: #fff;
   display: flex; /* フレックスボックスを使用 */
