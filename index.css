@@ -440,30 +440,31 @@ html, body {
   display: flex;
   justify-content: space-around; /* 要素を均等に並べる */
   align-items: center; /* 要素を縦に中央揃え */
-  padding: 10px; /* コンテナの内側にスペースを追加 */
+  padding: 10px; 
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 80%;
   margin: 0 auto;
 }
 
-.works-container div {
+.works {
   flex: 1; /* 各要素が均等に広がる */
   text-align: center; /* テキストを中央揃え */
   margin:  10px; /* 要素間にスペースを追加 */
   background-color: #f0f0f0;
   width: 100%;
-  min-width: 300px;
+  min-width: 150px;
+  max-width: 300px;
 }
 
-@media (max-width: 800px) {
+@media (max-width:600px) {
   .works-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 100%; 
   }
-  .works-container div {
+  .works {
     width: 90%; /* スマホ画面での幅を100%に設定 */
     margin: 10px 0; /* 上下に均等なスペースを追加 */
   }
@@ -495,6 +496,20 @@ html, body {
 
 .work-button:hover {
   background-color: #0056b3;
+}
+.calendar-container {
+  width: 80%; /* コンテナの幅を設定 */
+  max-width: 800px; /* 最大幅を設定 */
+  margin: 0 auto; /* 左右中央揃え */
+  padding: 10px; /* 内側のスペースを追加 */
+  background-color: #f0f0f0; /* 背景色を設定 */
+  text-align: center;
+}
+
+iframe {
+  width: 100%; /* iframe の幅をコンテナに合わせる */
+  height: 600px; /* 高さを設定 */
+  border: 0; /* 枠線を削除 */
 }
 
 .wish-contents {
