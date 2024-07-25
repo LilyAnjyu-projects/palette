@@ -337,9 +337,6 @@ html, body {
   }
 }
 
-
-
-
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -465,19 +462,21 @@ html, body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%; 
   }
   .works-container div {
-    width: 100%; /* スマホ画面での幅を100%に設定 */
+    width: 90%; /* スマホ画面での幅を100%に設定 */
     margin: 10px 0; /* 上下に均等なスペースを追加 */
   }
   .works-img {
     margin-right: 0;
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
     max-width: 300px;
   }
   .works-container p{
-    max-width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
 
