@@ -1,596 +1,141 @@
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input, select {
-  vertical-align: middle;
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html, body {
-  display: flex;
-  flex-direction: column;
-  color: #212121;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-
-
-.header {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0 auto;
-  background: #f5d300;
-  color: #fff;
-}
-.border-image {
- 
-  height: 30px;
-}
-
-@media only screen and (max-width: 767px) {
-  .header {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto; 
-  }
-}
-.logo1 {
-  margin: 0;
-  width: 110px;
-}
-.header__ttl {
-  font-size: 28px;
-  letter-spacing: 1px;
-  margin: 0 0 0 32px;
-  color: #f0f0f0;
-}
-.header__ttl a {
-  text-decoration: none; /* アンダーバーを無くす */
-}
-.header__ttl a:visited {
-  color: #f0f0f0; /* 訪問済みリンクの色 */
-}
-
-
-@media only screen and (max-width: 767px) {
-  .logo1 {
-    width: 80px; /* メディアクエリに応じた幅 */
-  }
-
-  .header__ttl {
-    font-size: 24px;
-    margin: 0 0 12px;
-  }
-}
-
-.gnav {
-  margin: 0 32px 0 auto;
-}
-@media only screen and (max-width: 767px) {
-  .gnav {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-.gnav__list {
-  display: flex;
-  align-items: center;
-}
-@media only screen and (max-width: 767px) {
-  .gnav__list {
-    justify-content: center;
-  }
-}
-.gnav__item {
-  margin: 0 16px 0 0;
-  position: relative;
-}
-@media only screen and (max-width: 767px) {
-  .gnav__item {
-    margin: 0 16px;
-  }
-}
-.gnav__item:last-of-type {
-  margin: 0;
-}
-@media only screen and (max-width: 767px) {
-  .gnav__item:last-of-type {
-    margin: 0 16px;
-  }
-}
-.gnav__link {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: all 0.5s ease 0s;
-}
-.gnav__link:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 4px;
-  background: #fff;
-  margin: 0 auto;
-  border-radius: 10px;
-  position: absolute;
-  top: 20px;
-  right: 0;
-  left: 0;
-  transition: all 0.5s ease 0s;
-}
-.gnav__link:hover {
-  opacity: 0.6;
-}
-.gnav__link:hover:after {
-  width: 30px;
-}
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}
-section {
-  text-align: center;
-}
-.section-box {
-  width: 80%;
-            height: auto;
-            background-color:	#74BBE1;
-            padding: 20px;
-            margin: 10px auto;
-            box-sizing: border-box;
-            text-align: center;
-            border-radius: 10px;
-}
-@media only screen and (max-width: 767px) {
-  .section-box {
-    padding: 15px;
-    margin-bottom: 15px;
-  }
-}
-
-.cute-list{
-  list-style: none; /* リストマークを無しにする */
-  padding: 0; /* パディングをリセット */
-  font-family: 'Pacifico', cursive;
-}
-.section-box ul{
-  list-style: none; 
-  padding: 0;
-}
-
-.section-box li {
-  font-size: 1.2em; /* フォントサイズを調整 */
-  margin-bottom: 10px; /* 項目間の余白を設定 */
-  color: #f0f0f0 /* テキストカラーを可愛い色に変更 */
-}
-.nakama img {
-  display: block;
-  margin: 0;
-}
-
-
-
-.intro h1 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-@media only screen and (max-width: 767px) {
-  .intro h1 {
-    font-size: 24px;
-  }
-}
-.intro h1:after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #fe53bb;
-  margin: 8px auto;
-  border-radius: 16px;
-}
-
-
-.intro p, .activities p, .requirements p, .testimonials p {
-  margin: 1em 0;
-}
-.intro img,.activities img,.requirements img{
-  width: 30%;
-}
-
-section h2 {
-  background-color: #f5d300; /* お好みの背景色に変更してください */
-  color: #fff; /* テキストの色を変更 */
-  padding: 10px 20px; /* 内側の余白を設定 */
-  margin-bottom: 20px; /* 下部の余白を設定 */
-  display: inline-block; /* 要素をインラインブロックにして中央揃え */
-  border-radius: 5px; /* 角を丸める */
-  text-align: center; /* テキストを中央揃え */
-  width: 70%;
-  font-size: 1.8em;
-
-}
-
-.section__ttl {
-  font-size: 32px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: center;
-  margin: 0 0 48px;
-}
-@media only screen and (max-width: 767px) {
-  .section__ttl {
-    font-size: 24px;
-  }
-}
-.section__ttl:after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #fe53bb;
-  margin: 8px auto;
-  border-radius: 16px;
-}
-.section__container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 90px 0;
-}
-@media only screen and (max-width: 1024px) {
-  .section__container {
-    width: 90%;
-    padding: 60px 0;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .section__container {
-    padding: 42px 0;
-  }
-}
-
-.nakama{
-  height: 40%;
-}
-
-
-
-section {
-  margin-bottom: 2em;
-}
-
-h1, h2 {
-  color: #333;
-}
-
-.intro p, .activities p, .requirements p, .testimonials p {
-  margin: 1em 0;
-}
-
-ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-
-label {
-  display: block;
-  margin-top: 1em;
-}
-
-input, select, button {
-  width: 100%;
-  padding: 0.5em;
-  margin-top: 0.5em;
-}
-
-button {
-  background-color: #f8b400;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #e09e00;
-}
-
-.contact-info a {
-  word-break: break-all;
-  /* 必要に応じて他のスタイルを追加できます */
-}
-
-
-.comennt{
-  background-color: #fff;
-  display: flex; /* フレックスボックスを使用 */
-  align-items: center; /* 垂直方向の中央揃え */
-  gap: 20px; /* アイテム間のスペース */
-  margin: 1em;
-
-}
-.comennt img{
-  padding: 2px;
-  max-width: 100px; /* 画像の最大幅を設定（必要に応じて調整） */
-  height: auto;
-}
-.comennt p {
-  margin: 0; /* pタグのデフォルトマージンをリセット */
-}
-
-
-.conversion-area {
-  background-color: #74BBE1;
-  padding: 20px;
-  text-align: center;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 20px auto;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.conversion-area h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.conversion-area p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-.conversion-area-cta-button {
-  display: inline-block;
-  width: 70%; 
-  padding: 10px 30px;
-  background-color: #fe53bb;
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
-}
-.conversion-area-cta-button:hover {
-  background-color: #c33e8e;
-}
-
-
-
-
-.recruit {
-  background: #08f7fe;
-  width: 100%;
-  text-align: center;
-  margin: 0; 
-  padding: 0;
-
-}
-.recruit__desc {
-  width: 100%;
-  margin: 0 auto;
-  line-height: 1.7;
-  padding: 0;
-}
-@media only screen and (max-width: 1024px) {
-  .recruit__desc {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .recruit__desc {
-    font-size: 14px;
-  }
-}
-.recruit__more {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fe53bb;
-  color: #fff;
-  text-decoration: none;
-  width: 300px;
-  height: 65px;
-  border-radius: 5px;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  box-shadow: 0 5px #742654;
-  transition: all 0.5s ease 0s;
-  border: 2px solid #c33e8e;
-  margin: 60px auto 0 auto;
-}
-.recruit__more:hover {
-  box-shadow: none;
-  background: #fff;
-  color: #fe53bb;
-}
-@media only screen and (max-width: 1024px) {
-  .recruit__more {
-    font-size: 20px;
-    width: 250px;
-    height: 55px;
-  }
-}
-.bottom-text2{
-  text-align: center;
-}
-.bottom-text2 h1{
-  font-size: 3vh;
-}
-
-.logo-link {
-  display: block; /* リンクをブロックレベルにして、画像全体をクリック可能にする */
-  text-align: center; /* ロゴを中央揃えにする */
-  margin: 20px auto; /* 上下のマージンを調整 */
-  width: 230px; 
-  height: 200px; 
-}
-
-.logo3 {
-  max-width: 100%; /* ロゴコンテナの最大幅を調整 */
-  display: flex; /* フレックスボックスで子要素を中央に配置 */
-  justify-content: center; /* 横方向の中央揃え */
-  align-items: center; /* 縦方向の中央揃え */
-}
-
-.logo-image {
-  max-width: 100%; /* 画像の最大幅をコンテナに合わせる */
-  height: auto; /* 高さを自動で調整して、縦横比を保つ */
-}
-
-
-.footer {
-  background: #f5d300;
-  padding: 24px 0;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-}
-@media only screen and (max-width: 767px) {
-  .footer {
-    font-size: 12px;
-  }
-}
-.border-image-footer {
-  width: 100%;
-  height: 30px;
-  margin-top: 0px;
-}
-.sticky-btn-box {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-}
-
-#sticky-btn1,
-#sticky-btn2 {
-  position: fixed;
-  bottom: 20px;
-  width: 80px;
-  height: 80px;
-  border-radius: 19px;
-  background-size: contain;
-}
-
-#sticky-btn1 {
-  left: 20px;
-  background-image: url(images/line.png);
-}
-
-#sticky-btn2 {
-  left: 120px;
-  background-image: url(images/insta.png);
-}
-
-@media only screen and (max-width: 767px) {
-  #sticky-btn1,
-  #sticky-btn2 {
-    width: 60px;
-    height: 60px;
-    border-radius: 14px;
-  }
-}
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仲間・サポーター募集 - 子育て応援隊ぱれっと！</title>
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+        <img src="images/border.png" alt="border" class="border-image">
+  <header class="header">
+    <img src="images/logo1.png" alt="Logo" class="logo1">
+    <h1 class="header__ttl"><a href="index.html">子育て応援隊ぱれっと！</a></h1>
+
+
+    <nav class="gnav">
+      <ul class="gnav__list">
+        <li class="gnav__item"><a class="gnav__link" href="index.html">HOME</a></li>
+        <li class="gnav__item"><a class="gnav__link" href="#price">私たちについて</a></li>
+        <li class="gnav__item"><a class="gnav__link" href="#donation.html">活動内容</a></li>
+
+      </ul>
+      <!-- /.gnav -->
+    </nav>
+
+    </header>
+
+    <main>
+        <div class="nakama" >
+            <img src="images/nakama.png"  width="100%" alt="仲間・サポーター募集"> 
+          </div>
+        <section class="intro">
+            <h1>仲間・サポーター募集</h1>
+            <p>私たちと一緒に活動し、地域の子育てを応援しませんか？<br>
+                お持ちのスキルや経験を活かして活動ができます。</p>
+                
+        </section>
+    
+
+        <section class="activities section-box">
+            <h2>活動内容とメリット</h2>
+            <p>学習支援や工作ワークショップ、お茶会、地域のお祭りなど、多岐にわたる活動を行っています。</p>
+            <ul class="cute-list">
+                <li>地域貢献ができる</li>
+                <li>スキルアップの機会</li>
+                <li>新しい仲間との出会い</li>
+                <li>工作ワークショップ優先予約</li>
+            </ul>
+            <img src="images/nakama1.jpg" alt="活動のイメージ">
+        </section>
+
+        <section class="requirements section-box">
+            <h2>募集要項</h2>
+            <p>以下のような方を募集しています。</p>
+            <ul class="cute-list">
+                <li>子育てに興味がある方</li>
+                <li>子どもが好きな方</li>
+                <li>毎日ワクワクしたい方</li>
+            </ul>
+            <p>
+                得意なことを活かして、苦手分野は得意な方にお任せしています。興味のある活動だけの参加も大歓迎！
+            </p>
+            <img src="images/box5.png" alt="募集要項のイメージ">
+        </section>
+
+        <section class="contact-info section-box">
+            <h2>お問い合わせ</h2>
+            <p>仲間・サポーターとして参加をご希望の方は、各種SNSのDMや以下の連絡先までご連絡ください。</p>
+            <ul>
+                <li>メール: <a href="mailto:palette.setagaya@gmail.com">palette.setagaya@gmail.com</a></li>
+            </ul>
+    
+        </section>
+
+        <section class="testimonials section-box">
+            <h2>サポーターの声</h2>
+            <p>現在のサポーターの声をお届けします。</p>
+
+            <div class="comennt">
+                <img src="images/comennt1.png" alt="メンバーのイメージ">
+                <p>地域の子供たちが笑顔で成長していく姿を見ると、私も元気をもらえます。サポートしていることに大きな意味を感じます。
+                   <br>
+                   <br>
+                   独身女性 
+                </p>
+            </div>
+            <div class="comennt">
+                <img src="images/comennt2.png" alt="メンバーのイメージ">
+                <p>この団体に参加してから、子供たちとの触れ合いが増え、私自身も多くのことを学ぶ機会が増えました。とても充実した時間を過ごしています。
+                <br>
+                <br>
+                小6,小2の母</p>
+            </div>
+
+
+        </section>
+
+        <div class="conversion-area">
+            <h2>今すぐ連絡して見学や参加の日程を聞いてみよう！</h2>
+            <a href="https://lin.ee/EKTUWzi" class="conversion-area-cta-button">LINEでトーク</a>
+          </div>
+    
+
+    <section class="recruit" id="recruit">
+        <div class="recruit__container section__container">
+
+            
+            <div class="bottom-text2">
+            <h6>人生を変える気づき、つながりを</h6>
+            <h1>子育て応援隊ぱれっと！</h1>
+            <a href="index.html" class="logo-link">
+              <div class="logo3">
+                <img src="images/logo1.png" alt="ロゴ" class="logo-image">
+              </div>
+            </a>
+  
+            お問い合わせ：<a href="mailto:palette.setagaya@gmail.com">palette.setagaya@gmail.com</a>
+            </div>
+        </div>
+      </section>
+  
+      
+    
+      <!-- /.main -->
+    </main>
+    <footer class="footer"> <small class="footer__copy"> <p>&copy; 2024 子育て応援隊ぱれっと！</p>
+  
+  </small>
+  
+  <div class="sticky-btn-box">
+    <a href="https://lin.ee/EKTUWzi"><button id="sticky-btn1"></button></a>
+    <a href="https://www.instagram.com/palette.setagaya"><button id="sticky-btn2"></button></a>
+  </div>
+      <!-- /.footer -->
+    </footer>
+    <img src="images/border.png" alt="border" class="border-image-footer">
+  </body>
+  </html>
+  
+
+    
