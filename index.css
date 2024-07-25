@@ -703,13 +703,25 @@ html, body {
 .bottom-text2 h1{
   font-size: 3vh;
 }
-.logo3 {
-  background-size: cover;
-  background-image: url(images/logo1.png);
-  background-repeat: no-repeat;  
-  margin:0 auto;
-  width: 230px; /* 重ねる画像の幅 */
+
+.logo-link {
+  display: block; /* リンクをブロックレベルにして、画像全体をクリック可能にする */
+  text-align: center; /* ロゴを中央揃えにする */
+  margin: 20px auto; /* 上下のマージンを調整 */
+  width: 230px; 
   height: 200px; 
+}
+
+.logo3 {
+  max-width: 100%; /* ロゴコンテナの最大幅を調整 */
+  display: flex; /* フレックスボックスで子要素を中央に配置 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.logo-image {
+  max-width: 100%; /* 画像の最大幅をコンテナに合わせる */
+  height: auto; /* 高さを自動で調整して、縦横比を保つ */
 }
 
 
