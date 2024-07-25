@@ -319,34 +319,26 @@ html, body {
   padding: 10px 20px; /* テキストの周囲に余白を設定 */
   border-radius: 5px; /* テキストの角を丸くする */
 }
-@media only screen and (max-width: 600px) {
-  .fv__desc {
-    font-size: 16px;
-    margin: 0 0 32px;
-  }
-  .fv__desc br {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .text-overlay{
-      font-size: 1.5em;
-      top: 60%; /* テキストの位置を少し下に移動 */
+@media only screen and (max-width: 767px) {
+  .text-overlay {
+    font-size: 1.2em; /* スマホ表示時のフォントサイズを調整 */
+    top: 60%; /* テキストの位置を少し下に移動 */
     width: 90%; /* スマホ表示時の横幅を増やす */
     transform: translate(-50%, -50%);
-
   }
-  
+
   .fv__ttl {
-    font-size: 2em; /* スマホ表示時のフォントサイズを調整 */
+    font-size: 1.8em; /* スマホ表示時のタイトルのフォントサイズを調整 */
   }
 
   .fv__desc {
-    font-size: 1em;
+    font-size: 1em; /* スマホ表示時の説明文のフォントサイズを調整 */
     padding: 10px;
   }
 }
+
+
+
 
 .fade {
   animation-name: fade;
