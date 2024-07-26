@@ -497,20 +497,6 @@ html, body {
 .work-button:hover {
   background-color: #0056b3;
 }
-.calendar-container {
-  width: 80%; /* コンテナの幅を設定 */
-  max-width: 800px; /* 最大幅を設定 */
-  margin: 0 auto; /* 左右中央揃え */
-  padding: 10px; /* 内側のスペースを追加 */
-  background-color: #f0f0f0; /* 背景色を設定 */
-  text-align: center;
-}
-
-iframe {
-  width: 100%; /* iframe の幅をコンテナに合わせる */
-  height: 600px; /* 高さを設定 */
-  border: 0; /* 枠線を削除 */
-}
 
 .wish-contents {
   max-width: 800px;
