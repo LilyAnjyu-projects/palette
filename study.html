@@ -22,7 +22,7 @@
             width: 100%;
         }
         .header {
-            background-color: #f8f9fa;
+            background-color: #ffce1f;
             padding: 20px;
             text-align: center;
             border-bottom: 1px solid #e0e0e0;
@@ -340,6 +340,57 @@
   max-width: 100%; /* 画像の最大幅をコンテナに合わせる */
   height: auto; /* 高さを自動で調整して、縦横比を保つ */
 }
+.footer {
+  background: #FF53B0;
+  padding: 24px 0;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    font-size: 12px;
+  }
+}
+.border-image-footer {
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+}
+.sticky-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#sticky-btn1,
+#sticky-btn2 {
+  position: fixed;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 19px;
+  background-size: contain;
+}
+
+#sticky-btn1 {
+  left: 20px;
+  background-image: url(images/line.png);
+}
+
+#sticky-btn2 {
+  left: 120px;
+  background-image: url(images/insta.png);
+}
+
+@media only screen and (max-width: 767px) {
+  #sticky-btn1,
+  #sticky-btn2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+  }
+}
     </style>
     <script>
       function toggleAnswer(id) {
@@ -473,6 +524,8 @@
     <div class="bottom-text2">
       <h6>人生に新たな気づきとつながりを！</h6>
       <h1>子育て応援隊ぱれっと！</h1>
+
+      
       <a href="index.html" class="logo-link">
         <div class="logo3">
           <img src="images/logo1.png" alt="ロゴ" class="logo-image">
@@ -481,8 +534,17 @@
       お問い合わせ：paletto.setagaya@gmail.com
       </div>
 
-    <div class="footer">
-        <p>&copy; 2024 子育て応援隊ぱれっと！. All rights reserved.</p>
-    </div>
+        <footer class="footer">
+
+            <small class="footer__copy"> <p>&copy;  2024 子育て応援隊ぱれっと！. All rights reserved.</p>
+       
+       
+       
+       <div class="sticky-btn-box">
+         <a href="https://lin.ee/EKTUWzi"><button id="sticky-btn1"></button></a>
+         <a href="https://www.instagram.com/palette.setagaya"><button id="sticky-btn2"></button></a>
+       </div>
+           <!-- /.footer -->
+         </footer>     
 </body>
 </html>
