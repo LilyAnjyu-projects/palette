@@ -161,7 +161,7 @@ html, body {
   flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
-  background: #f5d300;
+  background: #FF53B0;
   color: #fff;
 }
 .border-image {
@@ -726,7 +726,7 @@ html, body {
 
 
 .footer {
-  background: #f5d300;
+  background: #FF53B0;
   padding: 24px 0;
   color: #fff;
   text-align: center;
@@ -771,8 +771,8 @@ html, body {
 @media only screen and (max-width: 767px) {
   #sticky-btn1,
   #sticky-btn2 {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     border-radius: 14px;
   }
 }
