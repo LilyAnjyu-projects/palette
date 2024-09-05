@@ -240,6 +240,11 @@ html, body {
     margin: 0 16px;
   }
 }
+@media (max-width: 768px) {
+  .gnav__item a {
+      font-size: 14px;
+  }
+}
 .gnav__link {
   display: block;
   text-decoration: none;
