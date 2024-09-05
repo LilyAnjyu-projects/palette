@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>イベント・ワークショップ！</title>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="子育て応援隊パレットのイベント・ワークショップ詳細">
+        <meta name="keywords" content="世田谷, 子育て応援隊, 学習支援">
+        <meta property="og:title" content="イベント・ワークショップ！">
+    <meta property="og:description" content="子育て応援隊パレットのイベント・ワークショップ詳細">
+    <meta property="og:image" content="images/logo1.jpg">
+    <meta property="og:url" content="https://palette-beta.vercel.app/Event.html">
+    <meta property="og:type" content="website">
+     
+  <style>
+ /* ベーシックスタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヒーローセクション */
+.header_title {
+            background-color: #FF53B0;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header_title h1 {
+            margin: 0;
+        }
+.hero {
+    background: url('images/event.png') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    background-color:  rgba(255, 83, 176, 0.5);/* 半透明の背景色 */
+  color: #ffffff; /* テキストの色 */
+  padding: 10px; /* テキスト周りの余白 */
+  border-radius: 5px; /* 背景の角を丸くする */
+}
+.hero-content p {
+    background-color: rgba(255, 83, 176, 0.5); /* 半透明の背景色 */
+    color: #ffffff; /* テキストの色 */
+    padding: 10px; /* テキスト周りの余白 */
+    border-radius: 5px; /* 背景の角を丸くする */
+    margin-top: 10px; /* h1とのスペース調整 */
+}
+
+
+
+.cta-button {
+    background: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: #ff4f41;
+}
+
+/* 活動紹介セクション */
+.about {
+    padding: 40px 0;
+    background: #f4f4f4;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about-item h3 {
+    margin-top: 10px;
+}
+
+/* 企画中のイベントセクション */
+.upcoming {
+    padding: 40px 0;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.event-item {
+    background: #ffedec;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.event-item h3 {
+    margin-bottom: 10px;
+}
+
+/* 申し込みフォームセクション */
+.signup {
+    padding: 40px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.signup iframe {
+    max-width: 100%;
+    border: none;
+}
+
+.signup label {
+    margin-top: 10px;
+}
+
+.signup input, .signup select, .signup textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signup button:hover {
+    background: #ff4f41;
+}
+
+/* アクセスセクション */
+.access {
+    padding: 40px 0;
+    background:#f9f9f9;
+}
+
+/* フッター */
+.social-button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .social-button-1{
+          display: inline-block;
+            padding: 10px;
+            color: #111;
+            text-decoration: none;
+            border-radius: 20%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 20px;
+            margin-right: 10px;
+            background-image: url('images/facebook.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .social-button-2{
+          display: inline-block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 20px;
+            margin-right: 10px;
+            background-image: url('images/insta.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+       
+        .flow-section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .flow-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .flow-step {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .flow-step span {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .flow-note {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        .info-highlight {
+            background-color: #FDEA6C;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .bottom-text2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .bottom-text2 h6 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+        .bottom-text2 h1 {
+            margin: 5px 0; 
+            padding: 0;
+            line-height: 1.2;
+        }
+        .logo-link {
+  display: block; /* リンクをブロックレベルにして、画像全体をクリック可能にする */
+  text-align: center; /* ロゴを中央揃えにする */
+  margin: 20px auto; /* 上下のマージンを調整 */
+  width: 230px; 
+  height: 200px; 
+}
+
+.logo3 {
+  max-width: 100%; /* ロゴコンテナの最大幅を調整 */
+  display: flex; /* フレックスボックスで子要素を中央に配置 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.logo-image {
+  max-width: 100%; /* 画像の最大幅をコンテナに合わせる */
+  height: auto; /* 高さを自動で調整して、縦横比を保つ */
+}
+.footer {
+  background: #FF53B0;
+  padding: 24px 0;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    font-size: 12px;
+  }
+}
+.border-image-footer {
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+}
+.sticky-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#sticky-btn1,
+#sticky-btn2 {
+  position: fixed;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 19px;
+  background-size: contain;
+}
+
+#sticky-btn1 {
+  left: 20px;
+  background-image: url(images/line.png);
+}
+
+#sticky-btn2 {
+  left: 120px;
+  background-image: url(images/insta.png);
+}
+
+@media only screen and (max-width: 767px) {
+  #sticky-btn1,
+  #sticky-btn2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- ヒーローセクション -->
+  <div class="header_title">
+    <h1>子育て応援隊ぱれっと!</h1>
+  </div>
+
+  <header class="hero">
+      <div class="hero-content">
+          <h1>パレットのワークショップ＆イベント</h1>
+          <p>子どもたちが成長しながら楽しめる、多彩なプログラムを提供します。</p>
+          <a href="#about" class="cta-button">もっと知る</a>
+      </div>
+  </header>
+
+  <!-- 活動紹介セクション -->
+  <section id="about" class="about">
+      <div class="container">
+          <h2>活動の紹介</h2>
+          <p>「子育て応援隊ぱれっと!」では、休暇期間中に行われるワークショップやイベントを通じて、子どもたちが楽しみながら学べる場を提供しています。これらのイベントは、創造力や日常生活に役立つスキルを身につけることを目的としています。</p>
+          <div class="about-grid">
+              <div class="about-item">
+                  <img src="images/event-1.png" alt="工作ワークショップ">
+                  <h3>長期休暇中の工作ワークショップ</h3>
+                  <p>夏休みや冬休みを活用し、子どもたちが手を動かして楽しく学べる工作ワークショップを開催しています。</p>
+              </div>
+              <div class="about-item">
+                  <img src="images/event-2.png" alt="イベント">
+                  <h3>体験型イベント</h3> 
+                  <p>さまざまなテーマで行われる体験型イベント。家族で参加でき、楽しく学べる機会を提供します。</p>
+                 </div> 
+             <div class="about-item">
+                 <img src="images/event-3.png" alt="遊びイベント">
+                  <h3>昔ながらの遊びイベント</h3>
+                   <p>昔ながらの遊びを体験しながら、学びと楽しさを提供するイベントです。</p> 
+            </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- 企画中のイベントセクション -->
+  <section id="upcoming" class="upcoming">
+      <div class="container">
+            <h2>企画中のイベント</h2>
+         <div class="events-grid">
+             <div class="event-item">
+                 <h3>ワークショップ企画</h3>
+                  <p>2025年秋に開催予定。参加者が実践的なスキルを楽しく学べる体験型ワークショップを企画中です。</p> 
+                  <a href="#signup" class="cta-button">詳細を見る</a> 
+            </div>
+             <div class="event-item"> 
+                <h3>体験イベント</h3> 
+                <p>2025年春に開催予定。家族で楽しめる体験型イベントを企画中です。</p> 
+                <a href="#signup" class="cta-button">詳細を見る</a> 
+            </div> 
+        </div>
+      </div>
+  </section>
+
+  <!-- 申し込みフォームセクション -->
+  <section id="signup" class="signup">
+    <div class="container">
+        <h2>イベントに申し込む</h2>
+        <!-- Google フォームの埋め込みコード -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9tV8D5MkRX7Z5nl6Kc6d1Y9K0k7nWJY8Jl-Q/viewform?embedded=true" 
+                width="640" 
+                height="680" 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">読み込んでいます…</iframe>
+    </div>
+</section>
+
+  <!-- アクセスセクション -->
+  <section class="access">
+    <div class="container">
+        <h2>アクセス</h2>
+        <p>イベント会場: 東京・世田谷エリア（詳細は追ってご案内いたします）</p>
+        
+    </div>
+</section>
+<!-- フッター -->
+<div class="social-button-container">
+    <a href="https://www.facebook.com/palette.setagaya/" class="social-button-1"></a>
+    <a href="https://instagram.com/palette.setagaya" class="social-button-2"> </a>
+
+</div>
+<div class="bottom-text2">
+  <h6>すべての子どもにたくさんの機会を</h6>
+  <h1>子育て応援隊ぱれっと！</h1>
+
+  
+  <a href="index.html" class="logo-link">
+    <div class="logo3">
+      <img src="images/logo1.png" alt="ロゴ" class="logo-image">
+    </div>
+  </a>
+  お問い合わせ：paletto.setagaya@gmail.com
+  </div>
+
+    <footer class="footer">
+
+        <small class="footer__copy"> <p>&copy;  2024 子育て応援隊ぱれっと！. All rights reserved.</p>
+   
+   
+   
+   <div class="sticky-btn-box">
+     <a href="https://lin.ee/EKTUWzi"><button id="sticky-btn1"></button></a>
+     <a href="https://www.instagram.com/palette.setagaya"><button id="sticky-btn2"></button></a>
+   </div>
+       <!-- /.footer -->
+     </footer>     
+</body>
+</html>
