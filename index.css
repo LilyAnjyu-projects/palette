@@ -328,6 +328,7 @@ html, body {
 
   .fv__ttl {
     font-size: 1.5em; /* スマホ表示時のタイトルのフォントサイズを調整 */
+    margin-bottom: 0.5em; 
   }
 
   .fv__desc {
