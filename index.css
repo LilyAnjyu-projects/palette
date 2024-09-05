@@ -456,7 +456,17 @@ html, body {
   width: 100%;
   min-width: 150px;
   max-width: 300px;
+
+  opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
 }
+.works.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 @media (max-width:600px) {
   .works-container {
