@@ -14,6 +14,9 @@
 <meta property="og:type" content="website">
 
     <style>
+        nav ul {
+  list-style: none;
+}
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -21,18 +24,98 @@
             box-sizing: border-box;
             width: 100%;
         }
-        .header {
-            background-color: #ffce1f;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .gnav {
-           
+        .section__ttl {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0 0 48px;
+}
+@media only screen and (max-width: 767px) {
+  .section__ttl {
+    font-size: 24px;
+  }
+}
+.section__ttl:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #fe53bb;
+  margin: 8px auto;
+  border-radius: 16px;
+}
+.section__container {
+  width: 100%;
   margin: 0 auto;
+  padding: 90px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .section__container {
+    width: 90%;
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section__container {
+    padding: 42px 0;
+  }
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  background: #FF53B0;
+  color: #fff;
+  
+}
+.border-image {
+  height: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto; 
+  }
+}
+.logo1 {
+  margin: 0;
+  width: 110px;
+}
+.header__ttl {
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin: 0 0 0 32px;
+  color: #f0f0f0;
+}
+.header__ttl a {
+  text-decoration: none; /* アンダーバーを無くす */
+}
+.header__ttl a:visited {
+  color: #f0f0f0; /* 訪問済みリンクの色 */
+}
+
+
+@media only screen and (max-width: 767px) {
+  .logo1 {
+    width: 80px; /* メディアクエリに応じた幅 */
+  }
+
+  .header__ttl {
+    font-size: 24px;
+    margin: 0 0 12px;
+  }
+}
+
+.gnav {
+  margin: 0 32px 0 auto;
 }
 @media only screen and (max-width: 767px) {
   .gnav {
@@ -43,7 +126,8 @@
 .gnav__list {
   display: flex;
   align-items: center;
-  list-style-type: none;
+  
+  
 }
 @media only screen and (max-width: 767px) {
   .gnav__list {
@@ -474,19 +558,26 @@
   </script>
 </head>
 <body>
-    <div class="header">
-        <h1>しゅくだい ぱれっと！</h1>
+    <header class="header">
+        <img src="images/logo1.png" alt="Logo" class="logo1">
+        <h1 class="header__ttl"><a href="index.html">子育て応援隊ぱれっと！</a></h1>
+    
+    
         <nav class="gnav">
-            <ul class="gnav__list">
-              <li class="gnav__item"><a class="gnav__link" href="index.html">HOME</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="study.html">HOMEWORK</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="Event.html">EVENT</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="Teaparty.html">TEA PARTY</a></li>
-              <li class="gnav__item"><a class="gnav__link" href="support.html">JOIN US</a></li>
-            </ul>
-            <!-- /.gnav -->
-          </nav>
-    </div>
+          <ul class="gnav__list">
+            <li class="gnav__item"><a class="gnav__link" href="index.html">HOME</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="study.html">HOMEWORK</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="Event.html">EVENT</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="Teaparty.html">TEA PARTY</a></li>
+            <li class="gnav__item"><a class="gnav__link" href="support.html">JOIN US</a></li>
+          </ul>
+          <!-- /.gnav -->
+        </nav>
+    
+        
+    
+        <!-- /.header -->
+      </header>
     <div class="main">
         <div class="studyimage" >
           <img src="images/studyimg.png"  width="100%" alt="アイキャッチ画像"> 
