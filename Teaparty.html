@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>でこぼこてぃーぶれいく！</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="子育て応援隊パレットの茶話会でこぼこてぃーぶれいくの詳細">
+    <meta name="keywords" content="世田谷, 子育て応援隊, 学習支援">
+    <meta property="og:title" content="しゅだいぱれっと！">
+<meta property="og:description" content="子育て応援隊パレット茶話会でこぼこてぃーぶれいくの詳細">
+<meta property="og:image" content="images/logo1.jpg">
+<meta property="og:url" content="https://palette-beta.vercel.app/Teaparty.html">
+<meta property="og:type" content="website">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .header {
+            background-color: #FDBAF9;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .main h2 {
+            margin-top: 0;
+        }
+        .main p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .studyimge{
+            width: 1024px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .section__container {
+    width: 90%;
+    padding: 60px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .section__container {
+    padding: 42px 0;
+  }
+}
+        
+.tb-topics-container {
+  display: flex;
+  justify-content: space-around; /* 要素を均等に並べる */
+  align-items: center; /* 要素を縦に中央揃え */
+  padding: 10px; 
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tb-topics {
+  flex: 1; /* 各要素が均等に広がる */
+  text-align: center; /* テキストを中央揃え */
+  margin:  10px; /* 要素間にスペースを追加 */
+  background-color: #f0f0f0;
+  width: 100%;
+  min-width: 150px;
+  max-width: 300px;
+
+  opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+}
+.tb-topics.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width:600px) {
+  .tb-topics-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; 
+  }
+  .tb-topics {
+    width: 90%; /* スマホ画面での幅を100%に設定 */
+    margin: 10px 0; /* 上下に均等なスペースを追加 */
+  }
+  .tb-topics-img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+   
+  }
+  
+  .tb-topics p{
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+  
+       
+        
+        .study-content5 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .study-content5 h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .study-content5 p {
+            margin: 10px 0;
+        }
+        .study-content5-map ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .study-content5-map ul li {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 4px solid #007BFF;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .study-content5 iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ボタンのスタイル */
+.signup-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #FF8C8C; /* 柔らかいピンク色 */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ホバー時のスタイル */
+.signup-button:hover {
+    background-color: #FF6F6F; /* 少し濃いピンク色 */
+    transform: scale(1.05); /* 少し拡大する */
+}
+
+/* クリック時のスタイル（オプション） */
+.signup-button:active {
+    background-color: #FF4C4C; /* さらに濃いピンク色 */
+    transform: scale(0.98); /* クリック時に少し縮小する */
+}
+        .social-button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .social-button-1{
+          display: inline-block;
+            padding: 10px;
+            color: #111;
+            text-decoration: none;
+            border-radius: 20%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 20px;
+            margin-right: 10px;
+            background-image: url('images/facebook.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .social-button-2{
+          display: inline-block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 20px;
+            margin-right: 10px;
+            background-image: url('images/insta.png');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        .flow-section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .flow-section h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .flow-step {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .flow-step span {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .flow-note {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        .info-highlight {
+            background-color: #FDEA6C;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .bottom-text2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .bottom-text2 h6 {
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+        .bottom-text2 h1 {
+            margin: 5px 0; 
+            padding: 0;
+            line-height: 1.2;
+        }
+        .logo-link {
+  display: block; /* リンクをブロックレベルにして、画像全体をクリック可能にする */
+  text-align: center; /* ロゴを中央揃えにする */
+  margin: 20px auto; /* 上下のマージンを調整 */
+  width: 230px; 
+  height: 200px; 
+}
+
+.logo3 {
+  max-width: 100%; /* ロゴコンテナの最大幅を調整 */
+  display: flex; /* フレックスボックスで子要素を中央に配置 */
+  justify-content: center; /* 横方向の中央揃え */
+  align-items: center; /* 縦方向の中央揃え */
+}
+
+.logo-image {
+  max-width: 100%; /* 画像の最大幅をコンテナに合わせる */
+  height: auto; /* 高さを自動で調整して、縦横比を保つ */
+}
+.footer {
+  background: #FDBAF9;
+  padding: 24px 0;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    font-size: 12px;
+  }
+}
+.border-image-footer {
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+}
+.sticky-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+#sticky-btn1,
+#sticky-btn2 {
+  position: fixed;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 19px;
+  background-size: contain;
+}
+
+#sticky-btn1 {
+  left: 20px;
+  background-image: url(images/line.png);
+}
+
+#sticky-btn2 {
+  left: 120px;
+  background-image: url(images/insta.png);
+}
+
+@media only screen and (max-width: 767px) {
+  #sticky-btn1,
+  #sticky-btn2 {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+  }
+}
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <h1>でこぼこてぃーぶれいく！</h1>
+    </div>
+    <div class="main">
+        <div class="studyimage" >
+          <img src="images/tb.png"  width="100%" alt="アイキャッチ画像"> 
+        </div>
+
+        <h2>でこぼこてぃーぶれいくの特徴</h2>
+        <div class="tb-topics-container">
+        <div class="tb-topics">
+            <img src="images/tb-1.png" width="100%" style="display: block; margin: auto;" class="tb-topics-img" >
+            <h2>個別対応</h2>
+      
+            <p>
+                お母さま一人ひとりの気持ちに寄り添い、それぞれの状況に応じたサポートを提供します。
+            </p>
+          </div>
+          <div class="tb-topics">
+            <img src="images/tb-2.png" width="100%" style="display: block; margin: auto;" class="tb-topics-img" >
+            <h2>リラックスできるお茶会</h2>
+      
+            <p>
+                おいしいお茶とお菓子を楽しみながら、リラックスした雰囲気の中でお話しいただけます。心温まるひとときを過ごすことができます。
+            </p>
+          </div>
+          <div class="tb-topics">
+            <img src="images/tb-3.png" width="100%" style="display: block; margin: auto;" class="tb-topics-img" >
+            <h2>安心できるサポート</h2>
+      
+            <p>
+                経験豊富なスタッフが、お母さまの気持ちを理解し、安心して過ごせるようサポートします。お悩みや気になることを気軽に相談できます。
+            </p>
+          </div>
+          <script>
+            document.addEventListener("scroll", function() {
+                const elements = document.querySelectorAll(".tb-topics");
+                const windowHeight = window.innerHeight;
+    
+                elements.forEach(element => {
+                    const positionFromTop = element.getBoundingClientRect().top;
+    
+                    if (positionFromTop - windowHeight <= 0) {
+                        element.classList.add("show");
+                    }
+                });
+            });
+        </script>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+    <div class="study-content5">
+        <h1>開催日時と場所</h1>
+        <div class="study-content5-map">
+            <ul>
+                <li>開催日時: 原則毎月第二火曜日、9:30 AM - 11:30 AM</li>
+                <li>会場: 宮坂区民センター</li>
+                <li>住所: 東京都世田谷区宮坂1-24-6 </li>
+                <li>URL: <a href="https://www.city.setagaya.lg.jp/02072/8539.html">https://www.city.setagaya.lg.jp/02072/8539.html</a></li>
+            </ul>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6484.359180431347!2d139.6447603!3d35.647946700000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f39b66986719%3A0x7b36f095b74afd1c!2z5a6u5Z2C5Yy65rCR44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1725502236297!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+    </div>
+    <div class="button-container">
+        <a href="https://forms.gle/sJdRRmjmjoSbTTJt7" class="signup-button">参加申し込み</a>
+    </div>
+
+
+
+    <div class="social-button-container">
+        <a href="https://www.facebook.com/palette.setagaya/" class="social-button-1"></a>
+        <a href="https://instagram.com/palette.setagaya" class="social-button-2"> </a>
+
+    </div>
+    <div class="bottom-text2">
+      <h6>大人も子どももワクワク楽しいつながりを！</h6>
+      <h1>子育て応援隊ぱれっと！</h1>
+
+      
+      <a href="index.html" class="logo-link">
+        <div class="logo3">
+          <img src="images/logo1.png" alt="ロゴ" class="logo-image">
+        </div>
+      </a>
+      お問い合わせ：paletto.setagaya@gmail.com
+      </div>
+
+        <footer class="footer">
+
+            <small class="footer__copy"> <p>&copy;  2024 子育て応援隊ぱれっと！. All rights reserved.</p>
+       
+       
+       
+       <div class="sticky-btn-box">
+         <a href="https://lin.ee/EKTUWzi"><button id="sticky-btn1"></button></a>
+         <a href="https://www.instagram.com/palette.setagaya"><button id="sticky-btn2"></button></a>
+       </div>
+           <!-- /.footer -->
+         </footer>     
+</body>
+</html>
+
+
