@@ -447,6 +447,28 @@
 .logo-image {
   max-width: 100%; /* 画像の最大幅をコンテナに合わせる */
   height: auto; /* 高さを自動で調整して、縦横比を保つ */
+    opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.logo-image.show {
+  opacity: 1;
+  transform: translateY(0);
+  animation: popJump 0.6s ease;
+}
+
+@keyframes popJump {
+  0% {
+    transform: translateY(20px) scale(0.95);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
 }
 .footer {
   background: #FDBAF9;
@@ -627,7 +649,23 @@
          
        </div>
            <!-- /.footer -->
-         </footer>     
+         </footer> 
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector('.logo-image');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(logo);
+  });
+</script>
+
 </body>
 </html>
 
