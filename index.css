@@ -384,38 +384,38 @@ html, body {
   align-items: center;
   color: #fff;
   text-decoration: none;
-  width: 300px;
   height: 65px;
   border-radius: 5px;
   font-size: 24px;
   font-weight: bold;
-  letter-spacing: 1px; 
+  letter-spacing: 1px;
   transition: all 0.5s ease 0s;
+  padding: 0 20px; /* 横のパディングを追加して、文字が収まりやすく */
+  word-wrap: break-word; /* 長い単語を折り返す */
+  box-sizing: border-box; /* パディングを含むサイズ計算に変更 */
 }
+
 .fv__cv {
   background: #fe53bb;
   color: #fff;
   box-shadow: 0 5px #742654;
   border: 2px solid #c33e8e;
-
-  margin-top: 0; /* 上部の余白をなくす */
-  padding: 0;
+  margin-top: 0;
 }
 
 .fv__cv2 {
   background: #08f7fe;
   color: #000;
-  font-weight: bold;
-  letter-spacing: 1px;
   box-shadow: 0 5px #03585b;
-  transition: all 0.5s ease 0s;
   border: 2px solid #069ffe;
 }
+
 .fv__cv:hover {
   box-shadow: none;
   background: #fff;
   color: #fe53bb;
 }
+
 .fv__cv2:hover {
   box-shadow: none;
   background: #fff;
@@ -423,10 +423,20 @@ html, body {
 }
 
 @media only screen and (max-width: 1024px) {
-  .fv__cv .fv__cv2 {
+  .fv__cv, .fv__cv2 {
     font-size: 20px;
-    width: 250px;
+    width: 80%;  /* ボタンの幅を画面幅に合わせて調整 */
     height: 55px;
+    padding: 0 15px; /* 小さな画面でもボタンが収まるようにパディング調整 */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .fv__cv, .fv__cv2 {
+    font-size: 16px;  /* スマホサイズでは文字を小さく */
+    width: 90%;  /* 画面幅に合わせてさらに大きく */
+    height: 50px;
+    padding: 0 12px; /* スマホサイズでも収まるように */
   }
 }
 
