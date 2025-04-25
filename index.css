@@ -451,7 +451,29 @@ html, body {
 .image-container img {
   width: 200px; /* 画像の幅を調整 */
   height: auto; /* 画像の高さを自動調整 */
+opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
 }
+
+.image-container img.show {
+  opacity: 1;
+  transform: translateY(0);
+  animation: popJump 0.6s ease;
+}
+
+@keyframes popJump {
+  0% {
+    transform: translateY(20px) scale(0.95);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
 
 .works-container {
   display: flex;
