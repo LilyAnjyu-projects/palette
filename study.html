@@ -329,9 +329,9 @@
 
 .card-body {
   display: flex;
-  flex-wrap: wrap;  /* 画面サイズに応じてカードを折り返す */
-  justify-content: space-between;  /* 横に並べる */
-  gap: 20px;  /* カード間の隙間 */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;  /* ここでカード間の隙間を調整 */
 }
 
 .card-box {
@@ -339,8 +339,9 @@
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: calc(33.33% - 20px);  /* 画面幅の3分の1に設定（間隔を除く） */
-  box-sizing: border-box;  /* paddingやborderを幅に含める */
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 20px;  /* ここでカードボックス間に隙間を追加 */
 }
 
 .card-box h4 {
@@ -361,6 +362,7 @@
   background-color: #e0e0e0;
   border-radius: 4px;
   text-align: center;
+  margin-bottom: 8px;  /* 各リスト項目間の隙間 */
 }
 
 /* レスポンシブ対応 */
@@ -370,11 +372,8 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .card-box {
-    width: 100%;  /* さらに小さくなったら1列表示 */
-  }
-}
+@media screen and
+
 
 
         .faq-section {
