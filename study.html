@@ -314,7 +314,7 @@
         }
 
         .card {
-  width: 80%;
+  width: 80%;  /* カード全体の幅はそのまま */
   margin: 20px auto;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -344,12 +344,22 @@
 .month-card ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;  /* アイテムを折り返して配置 */
+  gap: 10px;  /* アイテム間の隙間 */
 }
 
 .month-card ul li {
   font-size: 1em;
   color: #555;
+  padding: 5px 10px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 60px;  /* アイテムの最小幅 */
+  text-align: center;
 }
+
 
         .faq-section {
             max-width: 800px;
