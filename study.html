@@ -365,14 +365,30 @@ background-color: #fff3B8;
 
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
-  .card-body {
-    width: calc(50% - 20px);  /* 画面幅が狭くなったら2列表示 */
+    .card-body {
+    display: flex;
+    flex-wrap: wrap; /* コンテンツが折り返して表示される */
+    justify-content: flex-start; /* 左寄せに配置 */
+    gap: 10px; /* アイテム間に隙間を追加 */
+  }
+
+  .month-card {
+    width: calc(33.33% - 10px); /* 各アイテムの幅を小さくして詰めて表示 */
+    margin-bottom: 10px; /* アイテム間に隙間を追加 */
   }
 }
 
 @media screen and (max-width: 480px) {
-  .card-body  {
-    width: 100%;  /* さらに小さくなったら1列表示 */
+  .card-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px; /* アイテム間の隙間 */
+  }
+
+  .month-card {
+    width: 100%; /* 1列表示にする */
+    margin-bottom: 10px; /* アイテム間に隙間を追加 */
   }
 }
 
