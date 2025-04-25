@@ -353,11 +353,12 @@ html, body {
 }
 .fv__container {
   display: flex;
-  justify-content: center; /* 要素を中央に配置 */
-  gap: 20px; /* 要素間のスペースを追加 */
-  margin-top: 0;
-
+  justify-content: center; /* 左右中央に配置 */
+  align-items: center;
+  gap: 20px; /* ボタン間に隙間を作る */
+  flex-wrap: wrap; /* モバイルでも縦並びになるように */
 }
+
 @media only screen and (max-width: 1024px) {
   .fv__container {
     width: 90%;
