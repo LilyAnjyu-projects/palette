@@ -442,6 +442,30 @@ button:hover {
   font-size: 16px;
   margin-bottom: 10px;
 }
+/* instagramをフォローのボタン */
+.signup-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #FF53B0;  /* インスタグラムのピンク色 */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;  /* ボタンを丸くする */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ボタンにホバー時のエフェクト */
+.signup-button:hover {
+    background-color: #d1429d;  /* ホバー時の色 */
+    transform: scale(1.05);  /* ホバー時に少し大きくなる */
+}
+
+/* ボタンをフォーカスしたときのエフェクト */
+.signup-button:focus {
+    outline: none;  /* フォーカス時のアウトラインを消す */
+    box-shadow: 0 0 0 4px rgba(255, 83, 176, 0.5);  /* フォーカス時に色が変わる */
+}
+
 .conversion-area-cta-button {
   display: inline-block;
   width: 70%; 
