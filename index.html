@@ -275,6 +275,26 @@
   AOS.init();
 </script>
     <!-- 他のコンテンツここまで -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".image-container img");
+
+    function checkPosition() {
+      const windowHeight = window.innerHeight;
+
+      images.forEach((img) => {
+        const positionFromTop = img.getBoundingClientRect().top;
+
+        if (positionFromTop - windowHeight <= -50) {
+          img.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkPosition);
+    checkPosition(); // 初期表示でもチェック
+  });
+</script>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
