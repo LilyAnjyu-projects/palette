@@ -357,11 +357,13 @@ html, body {
   align-items: center;
   gap: 20px; /* ボタン間に隙間を作る */
   flex-wrap: wrap; /* モバイルでも縦並びになるように */
+  width: 100%; /* 100%幅に設定 */
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 1024px) {
   .fv__container {
-    width: 90%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -374,6 +376,7 @@ html, body {
   }
   .fv__container {
     height: auto;
+    margin: 0 auto;
   }
 }
 
