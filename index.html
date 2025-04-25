@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="index.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
   <link rel="canonical" href="https://palette-beta.vercel.app/" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="description" content="子育て応援隊ぱれっと！のトップページ">
   <meta property='og:locale' content="ja_JP">
   <meta property="fb:app_id" content="palette.setagaya" />
@@ -181,7 +182,7 @@
         <div class="wish-contents">
           <h2 class="about__ttl section__ttl">子育て応援隊ぱれっと!の想い</h2>
 
-          <div class="wish-content">
+          <div class="wish-content" data-aos="fade-right" data-aos-duration="800">
             <img src="images/wish1.png" alt="ママ・パパ向け画像" class="wish-content-img">
             <div class="wish-content-text">
               <h1>ママ・パパ向け</h1>
@@ -192,7 +193,7 @@
             </div>
           </div>
         
-          <div class="wish-content">
+          <div class="wish-content" data-aos="fade-right" data-aos-duration="800">
             <img src="images/wish2.png" alt="支援者向け画像" class="wish-content-img">
             <div class="wish-content-text">
               <h1>支援者向け</h1>
@@ -203,7 +204,7 @@
             </div>
           </div>
         
-          <div class="wish-content">
+          <div class="wish-content" data-aos="fade-right" data-aos-duration="800">
             <img src="images/wish3.png" alt="団体・企業向け画像" class="wish-content-img">
             <div class="wish-content-text">
               <h1>団体・企業向け</h1>
@@ -282,5 +283,9 @@
     <!-- /.footer -->
   </footer>
   <img src="images/border.png" alt="border" class="border-image-footer">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
