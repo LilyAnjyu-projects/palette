@@ -314,7 +314,7 @@
         }
 
         .card {
-  width: 80%;  /* カード全体の幅はそのまま */
+  width: 80%;
   margin: 20px auto;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -327,37 +327,53 @@
   margin-bottom: 20px;
 }
 
-.month-card {
+.card-body {
+  display: flex;
+  flex-wrap: wrap;  /* 画面サイズに応じてカードを折り返す */
+  justify-content: space-between;  /* 横に並べる */
+  gap: 20px;  /* カード間の隙間 */
+}
+
+.card-box {
   background-color: #fff;
-  margin: 10px 0;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px);  /* 画面幅の3分の1に設定（間隔を除く） */
+  box-sizing: border-box;  /* paddingやborderを幅に含める */
 }
 
-.month-card h4 {
+.card-box h4 {
   color: #333;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
 
-.month-card ul {
+.card-box ul {
   list-style-type: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;  /* アイテムを折り返して配置 */
-  gap: 10px;  /* アイテム間の隙間 */
 }
 
-.month-card ul li {
+.card-box ul li {
   font-size: 1em;
   color: #555;
   padding: 5px 10px;
   background-color: #e0e0e0;
   border-radius: 4px;
-  display: inline-block;
-  min-width: 60px;  /* アイテムの最小幅 */
   text-align: center;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .card-box {
+    width: calc(50% - 20px);  /* 画面幅が狭くなったら2列表示 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-box {
+    width: 100%;  /* さらに小さくなったら1列表示 */
+  }
 }
 
 
