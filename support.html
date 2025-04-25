@@ -152,6 +152,22 @@
       <!-- /.footer -->
     </footer>
     <img src="images/border.png" alt="border" class="border-image-footer">
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const logo = document.querySelector('.logo-image');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(logo);
+  });
+</script>
+
   </body>
   </html>
   
